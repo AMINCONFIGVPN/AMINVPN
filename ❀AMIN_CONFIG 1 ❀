@@ -1,0 +1,6988 @@
+{
+  "remarks": "❀AMIN_CONFIG 1 ❀",
+  "log": {
+    "loglevel": "warning"
+  },
+  "dns": {
+    "servers": [
+      "https://8.8.8.8/dns-query",
+      {
+        "address": "178.22.122.100",
+        "domains": [
+          "geosite:openai"
+        ],
+        "skipFallback": true
+      },
+      {
+        "address": "8.8.8.8",
+        "domains": [
+          "full:aminconfig2.pages.dev",
+          "full:www.speedtest.net"
+        ],
+        "skipFallback": true
+      }
+    ],
+    "queryStrategy": "UseIP",
+    "tag": "dns"
+  },
+  "inbounds": [
+    {
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true,
+        "routeOnly": true
+      },
+      "tag": "socks-in"
+    },
+    {
+      "port": 10853,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "1.1.1.1",
+        "network": "tcp,udp",
+        "port": 53
+      },
+      "tag": "dns-in"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "aminconfig2.pages.dev",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/nLPhcsj8oLQbPpxR?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amiNcOnFIG2.PagES.dEv"
+        }
+      },
+      "tag": "prox-1"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.speedtest.net",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/HENuG9sSc6vX0teh?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmIncONFig2.PaGes.DEV"
+        }
+      },
+      "tag": "prox-2"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.16.1",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/suNI6kGmsRMK00F3?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMiNCONFIG2.PagEs.DEv"
+        }
+      },
+      "tag": "prox-3"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.48.1",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/0YV2M3U3OlwdSHQH?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMiNcoNFIG2.PagES.DeV"
+        }
+      },
+      "tag": "prox-4"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.80.1",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/xvnrhmPFeMwfKzXs?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amInCONFIG2.pAGES.deV"
+        }
+      },
+      "tag": "prox-5"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.32.1",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/g32A3NBrkoWzTs04?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amINCoNFIG2.PagES.dEv"
+        }
+      },
+      "tag": "prox-6"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.64.1",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/pGDV9znZlrFT8Bjm?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMinCOnfig2.Pages.dev"
+        }
+      },
+      "tag": "prox-7"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.112.1",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/MlgRtXHJrGzLpwBf?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmInConFig2.pAgeS.dEv"
+        }
+      },
+      "tag": "prox-8"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.96.1",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/jFiVqQXBXpF51Cd8?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINCOnFiG2.pAGEs.DeV"
+        }
+      },
+      "tag": "prox-9"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:6001]",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/gl6vxiawZF8PGwwm?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMInConFig2.pAGEs.Dev"
+        }
+      },
+      "tag": "prox-10"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:1001]",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/1kCceVBmcCvxMEbH?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMinCONFiG2.pAGES.dEv"
+        }
+      },
+      "tag": "prox-11"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:3001]",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/3qDoWdjnoAae6JCj?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amIncONFig2.PAgES.dEv"
+        }
+      },
+      "tag": "prox-12"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:7001]",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/Klfdsp81re31nqLQ?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMInCOnFIG2.pagES.Dev"
+        }
+      },
+      "tag": "prox-13"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:5001]",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/RPzEPFvtZmKeUvbx?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmINcOnFIG2.pAgEs.DeV"
+        }
+      },
+      "tag": "prox-14"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:4001]",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tCRKaAdsAS7fsxbC?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AminCONFig2.PaGES.dEV"
+        }
+      },
+      "tag": "prox-15"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:2001]",
+            "port": 443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/DmDLl79M7I1NreEc?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amInCONfiG2.paGES.dev"
+        }
+      },
+      "tag": "prox-16"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "aminconfig2.pages.dev",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/iwDeY8Yy8u0H3ILR?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmInCONfIG2.PAgES.dEV"
+        }
+      },
+      "tag": "prox-17"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.speedtest.net",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/RxXRuNzqIbaKiKlb?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINcONFiG2.PAgeS.Dev"
+        }
+      },
+      "tag": "prox-18"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.16.1",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/sIYNrpEcMwzGLuxx?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMinCONFIg2.pAgES.DEV"
+        }
+      },
+      "tag": "prox-19"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.48.1",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/XHYxj5U0wqYyM5XY?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amiNconfig2.PAGEs.DEV"
+        }
+      },
+      "tag": "prox-20"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.80.1",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/uCchN6asfFIbgoto?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMincoNfIG2.pAgeS.dev"
+        }
+      },
+      "tag": "prox-21"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.32.1",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/SAMHxaMZgc2mKIsW?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMiNcoNfiG2.PagEs.dEV"
+        }
+      },
+      "tag": "prox-22"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.64.1",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/X0QT77HqItEvIrGX?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMiNCoNfig2.pAGeS.dEV"
+        }
+      },
+      "tag": "prox-23"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.112.1",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/CtiMfexuod3htC1h?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMInConfig2.PaGEs.DEV"
+        }
+      },
+      "tag": "prox-24"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.96.1",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/xa999R6lMncnMi2Q?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmInCONFiG2.PAGES.dEV"
+        }
+      },
+      "tag": "prox-25"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:6001]",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/VEhE9quW4jmSTqWu?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amincONfIG2.PaGEs.Dev"
+        }
+      },
+      "tag": "prox-26"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:1001]",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/z77danqZuhKsVQyn?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINCoNFIG2.pAGEs.dEV"
+        }
+      },
+      "tag": "prox-27"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:3001]",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/hFaVB56YXf3GMrIw?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMincoNfIG2.PAGeS.deV"
+        }
+      },
+      "tag": "prox-28"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:7001]",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/gTku76UNJJVWjWnt?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmInCOnfIg2.PaGes.deV"
+        }
+      },
+      "tag": "prox-29"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:5001]",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/0hgowPorlntndzl5?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amiNConFig2.PaGEs.Dev"
+        }
+      },
+      "tag": "prox-30"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:4001]",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/CvUymcLGGvzAYYx7?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMiNconfIG2.pAgES.DEV"
+        }
+      },
+      "tag": "prox-31"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:2001]",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/7xlZbN8VP3BHSbvk?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmIncOnfig2.paGes.DEV"
+        }
+      },
+      "tag": "prox-32"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "aminconfig2.pages.dev",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/HBwb9ZiuSVA7qdIC?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMInCONfIg2.pAges.dev"
+        }
+      },
+      "tag": "prox-33"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.speedtest.net",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/rnBeBEmY0P0OwpHf?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amINCONfiG2.paGEs.deV"
+        }
+      },
+      "tag": "prox-34"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.16.1",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/pYTfcYXpV4IONgK6?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmInConFig2.PaGes.dev"
+        }
+      },
+      "tag": "prox-35"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.48.1",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/BXouQvngUnNdTaVr?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMinCoNfIG2.pAGEs.dEV"
+        }
+      },
+      "tag": "prox-36"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.80.1",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/C9HJNdXxzXKDRwJQ?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmiNCOnFIG2.PagEs.DeV"
+        }
+      },
+      "tag": "prox-37"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.32.1",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/qRyPWooBIcnq2Jzk?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amIncONFIG2.pAGeS.deV"
+        }
+      },
+      "tag": "prox-38"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.64.1",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/MKfha4ONTHT8Ms2a?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AminConFIg2.paGES.dEV"
+        }
+      },
+      "tag": "prox-39"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.112.1",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/w4p6eIwoIHCpcXzb?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMInCoNfIG2.pAGES.dEv"
+        }
+      },
+      "tag": "prox-40"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.96.1",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/gZzNP4Px4X0OsDjy?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMInCONFig2.Pages.DeV"
+        }
+      },
+      "tag": "prox-41"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:6001]",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/W5FqEhvrxA7Lue2h?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amIncONfIG2.PagEs.DEV"
+        }
+      },
+      "tag": "prox-42"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:1001]",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/Z9GZ9iPlHhNseFQd?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMINConFIG2.PAGes.deV"
+        }
+      },
+      "tag": "prox-43"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:3001]",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/84JXhqysA3e0lchB?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMincoNfiG2.PaGEs.dEV"
+        }
+      },
+      "tag": "prox-44"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:7001]",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/wwgH7CX09DP53nvP?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMINConFig2.pAGEs.dEv"
+        }
+      },
+      "tag": "prox-45"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:5001]",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/78So9stlUJ5NDc31?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMIncONfIg2.pAgeS.Dev"
+        }
+      },
+      "tag": "prox-46"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:4001]",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/G9yvDjuPfVK0rQVb?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmiNConfIG2.PAGes.DeV"
+        }
+      },
+      "tag": "prox-47"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:2001]",
+            "port": 2053,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/XaWDzcv80cdKmZdW?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMInCONfig2.pAGES.dev"
+        }
+      },
+      "tag": "prox-48"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "aminconfig2.pages.dev",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/5JS4EcQH7Is4zT6l?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amINCOnFig2.pAgEs.dEv"
+        }
+      },
+      "tag": "prox-49"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.speedtest.net",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/8pAxhqZxesu7Ar01?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmiNcOnFig2.PAGES.dEv"
+        }
+      },
+      "tag": "prox-50"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.16.1",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/Z2uPflNiz9sij4PY?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amInCONFig2.pagES.DeV"
+        }
+      },
+      "tag": "prox-51"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.48.1",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/wkZV5Ky8FF8IvGl1?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AminCONfIG2.PaGeS.dEv"
+        }
+      },
+      "tag": "prox-52"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.80.1",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/204i7YQgfBWgp0Gi?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AminCONfiG2.PAGes.DEV"
+        }
+      },
+      "tag": "prox-53"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.32.1",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/gmwLo9D9btA09JRq?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmINCOnFIG2.pages.dEV"
+        }
+      },
+      "tag": "prox-54"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.64.1",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/D4gSdDg804AtypF2?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMiNcOnFig2.PAGeS.dev"
+        }
+      },
+      "tag": "prox-55"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.112.1",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/qOFcy5sA9nMRzRO6?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMinConFIg2.PAgeS.dEV"
+        }
+      },
+      "tag": "prox-56"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.96.1",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/nhh7XmKfX88IDSBY?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amINcoNFIG2.PAGes.DEv"
+        }
+      },
+      "tag": "prox-57"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:6001]",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/vT0GhRGsUK8cQhDH?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMinCONFiG2.PaGES.DEv"
+        }
+      },
+      "tag": "prox-58"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:1001]",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/TiT1qQVfNif7aXlU?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMINConfIG2.paGEs.dev"
+        }
+      },
+      "tag": "prox-59"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:3001]",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/ldzZWAH7dXjUbEkP?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aminCoNFIG2.PAGEs.dEV"
+        }
+      },
+      "tag": "prox-60"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:7001]",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/WYOyuwg3WQj9jKZT?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aminCoNfiG2.PagES.DeV"
+        }
+      },
+      "tag": "prox-61"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:5001]",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/V7xhd9pn6HFOybqd?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmiNCoNfIg2.pAgEs.DeV"
+        }
+      },
+      "tag": "prox-62"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:4001]",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/10LDErVMeKMclV3S?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmInCoNfIg2.pagES.Dev"
+        }
+      },
+      "tag": "prox-63"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:2001]",
+            "port": 2083,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tqlHVaZv9tHuK6X9?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmINcoNfIg2.pAges.dev"
+        }
+      },
+      "tag": "prox-64"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "aminconfig2.pages.dev",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/qqJa4ol0Zcw0TaKE?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMincONfIG2.PAGeS.dev"
+        }
+      },
+      "tag": "prox-65"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.speedtest.net",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/hJybvg1z1QKz8W25?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMinCOnfiG2.pAgeS.dEv"
+        }
+      },
+      "tag": "prox-66"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.16.1",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/CSs14PB2ZPHSbDcj?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMiNCOnFIg2.paGEs.dEV"
+        }
+      },
+      "tag": "prox-67"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.48.1",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/vjnP8X2DDAIn7n4z?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMINCoNfIG2.PAgeS.deV"
+        }
+      },
+      "tag": "prox-68"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.80.1",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/lPlyKwCtuCshie7J?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amInConFIG2.pages.dEv"
+        }
+      },
+      "tag": "prox-69"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.32.1",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/saHEeOLDTwjdi65v?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMInconFiG2.pAGes.deV"
+        }
+      },
+      "tag": "prox-70"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.64.1",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/es6XGscG4RxdmAQd?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMincOnfIg2.pAGEs.deV"
+        }
+      },
+      "tag": "prox-71"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.112.1",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/JaaDKw30ohWGdPLh?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmincONfiG2.PaGes.dEv"
+        }
+      },
+      "tag": "prox-72"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.96.1",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/pTHbhp9HLqox2kaD?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amINcOnFig2.PaGEs.deV"
+        }
+      },
+      "tag": "prox-73"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:6001]",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/jh1SINyShPeN5KIN?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMinCONFIg2.pAgEs.DeV"
+        }
+      },
+      "tag": "prox-74"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:1001]",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/Pumz7a2qszkpK7eY?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMincONFIG2.pageS.DEv"
+        }
+      },
+      "tag": "prox-75"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:3001]",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/RHZbMn9CtufTfDA2?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmINCONfIg2.PagES.dEv"
+        }
+      },
+      "tag": "prox-76"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:7001]",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/nXubTdzF2KtV7N8r?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amiNCoNFIG2.PAges.dEv"
+        }
+      },
+      "tag": "prox-77"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:5001]",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/UJ2VDlSB6wEwzcJD?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMincONfiG2.PaGeS.dev"
+        }
+      },
+      "tag": "prox-78"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:4001]",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/XZus0uvG449EOOO2?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMiNconFiG2.pAGeS.DEv"
+        }
+      },
+      "tag": "prox-79"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:2001]",
+            "port": 2087,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/YvrmXFl0afcCcUuO?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINCoNFiG2.pAgEs.DeV"
+        }
+      },
+      "tag": "prox-80"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "aminconfig2.pages.dev",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/mxO8Pp0LPSFdT6EM?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AminconfIg2.pAges.DEv"
+        }
+      },
+      "tag": "prox-81"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.speedtest.net",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/fjtSeUkhXCUlL3U9?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMInconfig2.paGeS.dEV"
+        }
+      },
+      "tag": "prox-82"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.16.1",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/15IvjJsXJHnJIsxR?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmiNConfig2.PAGES.Dev"
+        }
+      },
+      "tag": "prox-83"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.48.1",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/4JFhvXJsCIQznj3g?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmiNConfIg2.PagEs.dev"
+        }
+      },
+      "tag": "prox-84"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.80.1",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/1yxCs2dFLJgyJwGe?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINcOnFIG2.PAGeS.DEv"
+        }
+      },
+      "tag": "prox-85"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.32.1",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/eIlLN0bBkLpdfTck?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmINconFIg2.paGEs.dEV"
+        }
+      },
+      "tag": "prox-86"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.64.1",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/5xsIQJkn7mLWBNzv?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmINCoNFIG2.PAgES.deV"
+        }
+      },
+      "tag": "prox-87"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.112.1",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/F3kjfB5HLIbCjhEv?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINcOnfIG2.pAges.DEV"
+        }
+      },
+      "tag": "prox-88"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.96.1",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/dcJ5mzDIgb1T9M0y?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amiNcONFiG2.PAgES.dev"
+        }
+      },
+      "tag": "prox-89"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:6001]",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/rNWnhZevsfrE91Q3?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AminconfiG2.pAGes.DEv"
+        }
+      },
+      "tag": "prox-90"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:1001]",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/2JKM4OdCiaNfDYbr?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmincONFig2.PAges.DEv"
+        }
+      },
+      "tag": "prox-91"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:3001]",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/GmA98kSx14Vzl8sH?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMincONFIG2.PaGEs.dEV"
+        }
+      },
+      "tag": "prox-92"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:7001]",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/SeAhzBf4NYriycdF?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMincoNfIG2.paGES.deV"
+        }
+      },
+      "tag": "prox-93"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:5001]",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/vzcCpwIMcZWDCvbl?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aminCONFIg2.pAgEs.dEv"
+        }
+      },
+      "tag": "prox-94"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:4001]",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/Oej7alAKVXqgVPB8?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMINconfIG2.paGeS.dEv"
+        }
+      },
+      "tag": "prox-95"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "[2606:4700:3030::6815:2001]",
+            "port": 2096,
+            "users": [
+              {
+                "id": "1f519d98-cfc3-47cf-97db-c1d205e37df7",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/VLvzw3XCN04E2cBW?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmincOnFIG2.PagEs.DEV"
+        }
+      },
+      "tag": "prox-96"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "aminconfig2.pages.dev",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr7ioQ0Y4SqSCyjuqt?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMiNCoNFIG2.PaGES.deV"
+        }
+      },
+      "tag": "prox-97"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "www.speedtest.net",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr3JvNRPn6gYRV3iOm?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AminCoNfiG2.PAgEs.DEV"
+        }
+      },
+      "tag": "prox-98"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.16.1",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trERpu2Ithqs8t6seW?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINCONFiG2.PAGEs.dev"
+        }
+      },
+      "tag": "prox-99"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.48.1",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trFiTGY6o0hy1srbbw?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMiNConfIG2.PAGES.dEv"
+        }
+      },
+      "tag": "prox-100"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.80.1",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/treeprl1bRdxPOazEs?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amiNcoNfIG2.PagES.DeV"
+        }
+      },
+      "tag": "prox-101"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.32.1",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trQRfIaBP1jKG9dsSZ?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amIncONfig2.Pages.DEv"
+        }
+      },
+      "tag": "prox-102"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.64.1",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trzdGKkDxBWWTCHPe1?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMIncOnfIg2.pAGes.deV"
+        }
+      },
+      "tag": "prox-103"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.112.1",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trFChAJGjUciuyZYBS?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amINcOnfIG2.pageS.DEv"
+        }
+      },
+      "tag": "prox-104"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.96.1",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trEI9c5cGPAm3OXHsE?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMincoNfiG2.PaGeS.deV"
+        }
+      },
+      "tag": "prox-105"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:6001]",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trB9im4gvH25Q1tt2r?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINcoNFig2.PAgES.DEv"
+        }
+      },
+      "tag": "prox-106"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:1001]",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trgNCiwLhrtmUtfmXI?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINcOnFig2.PaGeS.deV"
+        }
+      },
+      "tag": "prox-107"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:3001]",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trfBynheqG1etvZEcf?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINcOnFIG2.paGEs.DeV"
+        }
+      },
+      "tag": "prox-108"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:7001]",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trV3rbDw0rwFjTet7B?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMiNcoNFig2.paGeS.Dev"
+        }
+      },
+      "tag": "prox-109"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:5001]",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trC3JeaEcQyGocysEq?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMiNCOnFIg2.PaGEs.DeV"
+        }
+      },
+      "tag": "prox-110"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:4001]",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trjOZBDcgVRAppu28n?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amINcoNfIG2.pAgEs.DEv"
+        }
+      },
+      "tag": "prox-111"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:2001]",
+            "port": 443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trG0nYutWDZgVrFCuQ?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMIncoNFIG2.paGes.dEV"
+        }
+      },
+      "tag": "prox-112"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "aminconfig2.pages.dev",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trB0Sg3omCgUuZhNRJ?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmincoNfiG2.PaGES.DEV"
+        }
+      },
+      "tag": "prox-113"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "www.speedtest.net",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trUn431YWM7Y3BH4A8?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AminConfiG2.PagEs.deV"
+        }
+      },
+      "tag": "prox-114"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.16.1",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trOZyGffZfxRh1JFDq?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmInConfIG2.PAgeS.Dev"
+        }
+      },
+      "tag": "prox-115"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.48.1",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trSAMrns5NhyNAPkJt?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amINCOnfig2.pAges.Dev"
+        }
+      },
+      "tag": "prox-116"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.80.1",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trx3ho1TSzQWfHsqOL?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amIncONFIG2.PaGES.DEV"
+        }
+      },
+      "tag": "prox-117"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.32.1",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trihdRE093etqIgiIH?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINcoNFIG2.PAgEs.DEv"
+        }
+      },
+      "tag": "prox-118"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.64.1",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trAmlTWGGRldjjJbTA?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMinCoNfIG2.pAGeS.DeV"
+        }
+      },
+      "tag": "prox-119"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.112.1",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trdA3mcfIHX5wDFKBP?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmiNCOnFiG2.paGeS.dev"
+        }
+      },
+      "tag": "prox-120"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.96.1",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trgCbCui6FomcFnF7s?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMInCoNFig2.pAGES.dEv"
+        }
+      },
+      "tag": "prox-121"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:6001]",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr49S9XqzQxPucllPJ?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMInCONFIg2.pagES.DeV"
+        }
+      },
+      "tag": "prox-122"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:1001]",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr9NfTh7ez19VdSmIg?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMiNcoNFIg2.PAgES.Dev"
+        }
+      },
+      "tag": "prox-123"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:3001]",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trVzKXWCoRjlwR9He5?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AminCOnfig2.paGes.DEV"
+        }
+      },
+      "tag": "prox-124"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:7001]",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trFgvNaoahRAJjy1sr?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINcoNFig2.pAGEs.deV"
+        }
+      },
+      "tag": "prox-125"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:5001]",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trJphbaiJJqne49WoV?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AminConFiG2.pAGES.dEv"
+        }
+      },
+      "tag": "prox-126"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:4001]",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trcHg9X1pRUw8KQ8ci?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMincOnfIg2.paGES.dev"
+        }
+      },
+      "tag": "prox-127"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:2001]",
+            "port": 8443,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trtGhx2qrUSHDuDxFM?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMINcOnFIg2.PAgEs.dEv"
+        }
+      },
+      "tag": "prox-128"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "aminconfig2.pages.dev",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trU22PgjOYenGvYZfx?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMincoNfIG2.PAGEs.DEv"
+        }
+      },
+      "tag": "prox-129"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "www.speedtest.net",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trv7Ltd1PgIu9DagAy?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMInCOnFIg2.pAGes.DEV"
+        }
+      },
+      "tag": "prox-130"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.16.1",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trpxxML9Ms9mpUwVKH?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AminCOnfIg2.paGES.deV"
+        }
+      },
+      "tag": "prox-131"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.48.1",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trn8tEMLL7O7JqE29C?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMiNConfig2.paGes.DEV"
+        }
+      },
+      "tag": "prox-132"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.80.1",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trhje8bbDzdN69QvgX?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amiNconfIG2.pAGES.DeV"
+        }
+      },
+      "tag": "prox-133"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.32.1",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trV6MxujJXdLusKowV?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMincONFIg2.pagEs.deV"
+        }
+      },
+      "tag": "prox-134"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.64.1",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trUYXq4QamyzP1Qpb7?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmINConFIg2.PagES.DEv"
+        }
+      },
+      "tag": "prox-135"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.112.1",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr9h2gxoPP0Nz0HE6j?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AminCONfig2.paGeS.deV"
+        }
+      },
+      "tag": "prox-136"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.96.1",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trLkUR5yHShGwlpCfl?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMINCOnfig2.paGeS.dEv"
+        }
+      },
+      "tag": "prox-137"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:6001]",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trJoFdZikuPqfSG3AM?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMinconfIg2.PaGEs.deV"
+        }
+      },
+      "tag": "prox-138"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:1001]",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr48Y3Cyayzvm5k5xG?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amiNcOnFIg2.paGEs.deV"
+        }
+      },
+      "tag": "prox-139"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:3001]",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trhwaZq6cZHzwwd7yH?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMinCOnFIG2.PagEs.dEv"
+        }
+      },
+      "tag": "prox-140"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:7001]",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trktXFKU6m1DtrANWi?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmIncONfiG2.Pages.deV"
+        }
+      },
+      "tag": "prox-141"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:5001]",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr3xPIJ1nIv6yQ4uD9?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMInconFiG2.pAGES.Dev"
+        }
+      },
+      "tag": "prox-142"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:4001]",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trG0tAtkRDVv1FOnBN?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMInCoNFig2.PaGEs.deV"
+        }
+      },
+      "tag": "prox-143"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:2001]",
+            "port": 2053,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr0Rg1OwLeBzYhStJu?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmiNconfIg2.pages.deV"
+        }
+      },
+      "tag": "prox-144"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "aminconfig2.pages.dev",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trZlbs8s8i3mQEqWPU?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmINCoNfIg2.pageS.DeV"
+        }
+      },
+      "tag": "prox-145"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "www.speedtest.net",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trtjLQO2ofuSjOFz63?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMiNconfig2.PaGES.DEv"
+        }
+      },
+      "tag": "prox-146"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.16.1",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trRrCkCRzcwF57778I?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amINCoNFIg2.pAgEs.deV"
+        }
+      },
+      "tag": "prox-147"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.48.1",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr0EEhjNoR8MtzW4mL?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMInconfig2.pAGEs.DeV"
+        }
+      },
+      "tag": "prox-148"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.80.1",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trhAkU4d1X49BAPejd?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMiNCONfIg2.Pages.dEv"
+        }
+      },
+      "tag": "prox-149"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.32.1",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr8Oq2ZfIjjy7dHXyg?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMInconFiG2.PAGeS.DeV"
+        }
+      },
+      "tag": "prox-150"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.64.1",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr3r7nrHNaW45WBTxd?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amiNCONfig2.pAgES.DeV"
+        }
+      },
+      "tag": "prox-151"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.112.1",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trwScIxXo7iJkv1AUW?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmIncONFIg2.PAGEs.dEv"
+        }
+      },
+      "tag": "prox-152"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.96.1",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trMXP69BKBxVUYSVk8?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMinconFiG2.PagEs.DEv"
+        }
+      },
+      "tag": "prox-153"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:6001]",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trfBeVf7tIsg7WxHaW?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMINcoNfiG2.PAGES.dEV"
+        }
+      },
+      "tag": "prox-154"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:1001]",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trqmttkbPq60h8dZx2?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMinCONfig2.Pages.dev"
+        }
+      },
+      "tag": "prox-155"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:3001]",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trZb4SofSd4GzSujUB?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMiNConFig2.pAgEs.dEV"
+        }
+      },
+      "tag": "prox-156"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:7001]",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trYqJPFfqgcqJyRGUT?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amInConFiG2.PaGeS.dEv"
+        }
+      },
+      "tag": "prox-157"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:5001]",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trhuSOxiGYyoDkdROR?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINCONFIg2.PAGeS.DeV"
+        }
+      },
+      "tag": "prox-158"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:4001]",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr32EeO18T6iEx4mbG?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMInConFiG2.pAges.dEV"
+        }
+      },
+      "tag": "prox-159"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:2001]",
+            "port": 2083,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trmcfQZaryzhdCN3Ab?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINcoNfIg2.paGes.dEv"
+        }
+      },
+      "tag": "prox-160"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "aminconfig2.pages.dev",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/triIoTEPcp9pCAa2ti?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMIncoNFig2.PagEs.DEV"
+        }
+      },
+      "tag": "prox-161"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "www.speedtest.net",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trHJrfdcHxe7RJcmGp?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMiNCOnFIg2.pAgEs.dEV"
+        }
+      },
+      "tag": "prox-162"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.16.1",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trZJnwuHnhbrVybGS0?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMInCoNFig2.PAGeS.DEV"
+        }
+      },
+      "tag": "prox-163"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.48.1",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr6P0wZ70ryIkSwdIF?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMINcOnfig2.PAgEs.DEV"
+        }
+      },
+      "tag": "prox-164"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.80.1",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trHLBCKUht4uUUjMdU?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMincoNFIG2.pAGes.DEv"
+        }
+      },
+      "tag": "prox-165"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.32.1",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr4IVfrRKU4rcOoWoi?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMInCoNFig2.PagES.DEV"
+        }
+      },
+      "tag": "prox-166"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.64.1",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trSShSvDmVW6lrEZvT?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMInCOnfig2.pAGEs.dEV"
+        }
+      },
+      "tag": "prox-167"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.112.1",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trV7tF6SWe0G0SsXCH?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amiNcoNfig2.PaGES.DeV"
+        }
+      },
+      "tag": "prox-168"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.96.1",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr6I5EkDins7X2DXJR?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMiNconFig2.PAGes.deV"
+        }
+      },
+      "tag": "prox-169"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:6001]",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trBkw4TtQojWimIVjM?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMinCONFig2.PaGeS.dev"
+        }
+      },
+      "tag": "prox-170"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:1001]",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trTDwuJhnBCEHiHs0K?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmInCoNFIg2.pAgES.dev"
+        }
+      },
+      "tag": "prox-171"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:3001]",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trjMhhLK620SEcedFq?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AminCoNfig2.PAGes.dEV"
+        }
+      },
+      "tag": "prox-172"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:7001]",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/treEzBFGbqEej0b1c0?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmINCoNFig2.PageS.dev"
+        }
+      },
+      "tag": "prox-173"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:5001]",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trwxekYolvYX6gDfvD?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amiNCOnfig2.pAGeS.dEV"
+        }
+      },
+      "tag": "prox-174"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:4001]",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/treX1NyerPMnGciQ4v?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMIncOnfIg2.PaGes.dEV"
+        }
+      },
+      "tag": "prox-175"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:2001]",
+            "port": 2087,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trFrIO7357zNFMdxCw?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amInCOnFIG2.pAGeS.dEv"
+        }
+      },
+      "tag": "prox-176"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "aminconfig2.pages.dev",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trpk80qqo1FxQkJ28q?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amiNCONFIg2.PAGEs.dEV"
+        }
+      },
+      "tag": "prox-177"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "www.speedtest.net",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trdowfoSV4rTAZAL6n?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmiNCONfiG2.PAGeS.DEV"
+        }
+      },
+      "tag": "prox-178"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.16.1",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trAtXATuSVK0HeC0Hy?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMIncoNFiG2.PAgEs.dEv"
+        }
+      },
+      "tag": "prox-179"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.48.1",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trYwIDnZCmLg5V9Aiy?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aminConfig2.pageS.Dev"
+        }
+      },
+      "tag": "prox-180"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.80.1",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr8qJW06Noutkg5MmR?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AminCoNfIg2.PagEs.DEV"
+        }
+      },
+      "tag": "prox-181"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.32.1",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/tr0zmE9lEIQRvJSzxF?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMInCONFiG2.paGes.dEv"
+        }
+      },
+      "tag": "prox-182"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.64.1",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trpciJmZtM52xC8MgZ?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMIncONFiG2.pages.dev"
+        }
+      },
+      "tag": "prox-183"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.112.1",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trmnDwLvY48BTDdCE5?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMinCONFiG2.PagEs.dEv"
+        }
+      },
+      "tag": "prox-184"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.96.1",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trN0msAvX7S35ULubO?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMinconfIg2.pAgEs.DeV"
+        }
+      },
+      "tag": "prox-185"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:6001]",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trpxDGmn07AVDVJoQR?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "amiNcoNfIG2.pAgeS.dEV"
+        }
+      },
+      "tag": "prox-186"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:1001]",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trGDIsYH9iaLrFw3cS?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmincONFIg2.PagEs.DEv"
+        }
+      },
+      "tag": "prox-187"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:3001]",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trgxyM7Najon4dN5Jn?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmiNConfiG2.pagEs.dev"
+        }
+      },
+      "tag": "prox-188"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:7001]",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trMEc7OKuwrVTk6gpS?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AmiNConFIG2.PAGes.DEV"
+        }
+      },
+      "tag": "prox-189"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:5001]",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trhP7QmZ4cQ59GuHJd?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMInCOnfIg2.paGeS.deV"
+        }
+      },
+      "tag": "prox-190"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:4001]",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trOnWFXRT2ZH6E2VYI?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "AMinCOnfIg2.PAgEs.DEV"
+        }
+      },
+      "tag": "prox-191"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "[2606:4700:3030::6815:2001]",
+            "port": 2096,
+            "password": ".b&flbA+XU@E(9m<",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "host": "aminconfig2.pages.dev",
+          "path": "/trt9LilxelDomuG5O0?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "aMiNCONFiG2.pagEs.deV"
+        }
+      },
+      "tag": "prox-192"
+    },
+    {
+      "protocol": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP"
+      },
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "inboundTag": [
+          "dns-in"
+        ],
+        "outboundTag": "dns-out",
+        "type": "field"
+      },
+      {
+        "inboundTag": [
+          "socks-in"
+        ],
+        "port": "53",
+        "outboundTag": "dns-out",
+        "type": "field"
+      },
+      {
+        "inboundTag": [
+          "dns"
+        ],
+        "ip": [
+          "8.8.8.8"
+        ],
+        "port": "53",
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "178.22.122.100"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "balancerTag": "all",
+        "inboundTag": [
+          "dns"
+        ],
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:openai"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "network": "tcp",
+        "balancerTag": "all",
+        "type": "field"
+      }
+    ],
+    "balancers": [
+      {
+        "tag": "all",
+        "selector": [
+          "prox"
+        ],
+        "strategy": {
+          "type": "leastPing"
+        },
+        "fallbackTag": "prox-2"
+      }
+    ]
+  },
+  "observatory": {
+    "subjectSelector": [
+      "prox"
+    ],
+    "probeUrl": "https://www.gstatic.com/generate_204",
+    "probeInterval": "30s",
+    "enableConcurrency": true
+  },
+  "stats": {}
+}
